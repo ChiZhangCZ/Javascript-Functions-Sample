@@ -7,6 +7,5 @@ function changeName(person, newName){
 
 function addAge(person){
 	person.age = person.age + 1;
-	console.log(person);
 	return person;
 }
