@@ -7,7 +7,7 @@ var num = 111;
 var strArray = ["John", "Jack", "Jill"];
 
 function addString(string){
-	strArray[strArray.length] = "Jason";
+	strArray[strArray.length] = string;
 	return strArray;
 }
 

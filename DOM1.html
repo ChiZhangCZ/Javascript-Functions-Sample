@@ -3,6 +3,16 @@
 <head>
 </head>
 <body>
+	<section id="paragraph">	
+	</section>
 
+	<script type="text/javascript" src="DOM1.js"></script>
+
+	<form>
+		<input type= "button" onclick="document.getElementById('paragraph').appendChild(createParagraph())" value="Create Paragraph" /><br><br>
+		String: <input type="Text" name="paraFill" id="paraFill">
+		<input type= "button" onclick="fillParagraph(document.getElementById('paraFill').value)" value="Fill Paragraph" /><br><br>
+		<input type= "button" onclick="deleteParagraph()" value="Delete Paragraph" />
+	</form>
 </body>
 </html>
