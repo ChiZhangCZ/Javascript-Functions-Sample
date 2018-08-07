@@ -6,4 +6,3 @@ function makePerson(name, age, occupation){
 	blankPerson.occupation = occupation;
 	return blankPerson;
 }
-
