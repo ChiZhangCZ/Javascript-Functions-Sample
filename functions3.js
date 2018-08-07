@@ -1,6 +1,6 @@
 function makePerson(name, age, occupation){
 
-	var blankPerson = {name: "Blank", age: 0, occupation: "Blank"};
+	var blankPerson = {};
 	blankPerson.name = name;
 	blankPerson.age = age;
 	blankPerson.occupation = occupation;
