@@ -35,23 +35,22 @@ function fizzBuzz(){
 function threeDivide(number){
 
 	var count = 0;
-	var tempNum = number;
 
-	while(tempNum!=1){
-		if(tempNum%3 == 0){
-			tempNum = tempNum/3;
+	while(number!=1){
+		if(number%3 == 0){
+			number = number/3;
 			count++;
-			console.log(tempNum*3 + "/3 = " + tempNum);
+			console.log(number*3 + "/3 = " + number);
 		}
-		else if((tempNum + 1)%3 == 0){
-			tempNum++;
+		else if((number + 1)%3 == 0){
+			number++;
 			count++;
-			console.log(tempNum - 1 + " + 1 = " + tempNum);
+			console.log(number - 1 + " + 1 = " + number);
 		}
-		else if((tempNum - 1)%3 == 0){
-			tempNum -= 1;
+		else if((number - 1)%3 == 0){
+			number -= 1;
 			count++;
-			console.log(tempNum + 1 + " - 1 = " + tempNum);
+			console.log(number + 1 + " - 1 = " + number);
 		}
 	}
 	console.log("Number of iterations: " + count);
