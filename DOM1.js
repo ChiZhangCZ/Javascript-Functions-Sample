@@ -1,18 +1,18 @@
-function createParagraph(paraName){
+function createParagraph(string){
 
 	var para = document.createElement("p");
-	var starter = document.createTextNode("Your paragraph");
+	var starter = document.createTextNode(string);
 	para.appendChild(starter);
 	return para;
 }
 
-function fillParagraph(string){
+function fillParagraph(paraNumber,string){
 
-	document.getElementsByTagName("p")[0].innerHTML = string;
+	document.getElementsByTagName("p")[paraNumber].innerHTML = string;
 }
 
-function deleteParagraph(){
+function deleteParagraph(paraNumber){
 
-	var para = document.getElementsByTagName("p")[0];
+	var para = document.getElementsByTagName("p")[paraNumber];
     para.parentNode.removeChild(para);
 }

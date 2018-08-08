@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>The Paragraphinator</title>
 </head>
 <body>
+
+	<h3>The Paragraphinator</h3>
 	<section id="paragraph">	
 	</section>
 
 	<script type="text/javascript" src="DOM1.js"></script>
 
 	<form>
-		<input type= "button" onclick="document.getElementById('paragraph').appendChild(createParagraph())" value="Create Paragraph" /><br><br>
-		String: <input type="Text" name="paraFill" id="paraFill">
-		<input type= "button" onclick="fillParagraph(document.getElementById('paraFill').value)" value="Fill Paragraph" /><br><br>
-		<input type= "button" onclick="deleteParagraph()" value="Delete Paragraph" />
+		<h4>Creator</h4>
+		Your Paragraph: <input type="Text" name="paraFill" id="paraFill">
+		<input type= "button" onclick="document.getElementById('paragraph').appendChild(createParagraph(document.getElementById('paraFill').value))" value="Create Paragraph" /><br><br>
+
+		<h4>Editor</h4>
+		Paragraph to be Edited (Number) : <input type="number" name="paraNo" id="paraNo">
+		Your Edit: <input type="Text" name="paraEdit" id="paraEdit">
+		<input type= "button" onclick="fillParagraph(document.getElementById('paraNo').value - 1,document.getElementById('paraEdit').value)" value="Edit Paragraph" /><br><br>
+
+		<h4>Deleter</h4>
+		Paragraph to be Deleted (Number) : <input type="number" name="paraDel" id="paraDel">
+		<input type= "button" onclick="deleteParagraph(document.getElementById('paraDel').value - 1)" value="Delete Paragraph" />
 	</form>
 </body>
 </html>
