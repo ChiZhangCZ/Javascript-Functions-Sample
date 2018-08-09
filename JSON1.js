@@ -11,7 +11,7 @@ request.send();
 
         if(key != "members"){
 
-        	document.write(key.toUpperCase()+" : "+requestData[key]+"<br><br>");
+        	document.write(key.toUpperCase()+" : "+requestData[key]+"<br>");
         }
         else{
 
@@ -22,11 +22,11 @@ request.send();
 
         			if(memberKey != "powers"){
 
-        				document.write(memberKey.toUpperCase()+" : "+member[memberKey]+"<br><br>")
+        				document.write(memberKey.toUpperCase()+" : "+member[memberKey]+"<br>")
         			}
         			else{
 
-        				document.write(memberKey.toUpperCase()+" : "+member[memberKey]+"<br><br><br>")
+        				document.write(memberKey.toUpperCase()+" : "+member[memberKey]+"<br><br>")
         			}       			
         		}
 
