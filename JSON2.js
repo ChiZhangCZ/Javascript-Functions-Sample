@@ -16,7 +16,12 @@ function kingFinder(kingName){
 
 	for(var king of kings){
 
-		if(king["nm"].toUpperCase().includes(kingName)){
+		if(kingName == "" || kingName == " "){
+
+			element.appendChild(myP);
+		}
+
+		else if(king["nm"].toUpperCase().includes(kingName)){
 
 			for(var key of Object.keys(king)){
 
