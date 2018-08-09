@@ -3,34 +3,36 @@ var request = new XMLHttpRequest();
 request.open("GET", requestURL);
 request.responseType = "json"
 request.send();
-    request.onload = function squad() {
+    request.onload = function() {
     var requestData = request.response;
     var myP = document.createElement("p");
+    var element = document.getElementById("main");
 
     for(var key of Object.keys(requestData)){
 
         if(key != "members"){
 
-        	document.write(key.toUpperCase()+" : "+requestData[key]+"<br>");
+        	myP.innerHTML += (key.toUpperCase()+" : "+requestData[key]+"<br>");
         }
         else{
 
-            document.write(key.toUpperCase()+" :<br><br>");
+            myP.innerHTML += (key.toUpperCase()+" :<br><br>");
         	for(var member of requestData["members"]){
 
         		for(var memberKey of Object.keys(member)){
 
         			if(memberKey != "powers"){
 
-        				document.write(memberKey.toUpperCase()+" : "+member[memberKey]+"<br>")
+        				myP.innerHTML += (memberKey.toUpperCase()+" : "+member[memberKey]+"<br>")
         			}
         			else{
 
-        				document.write(memberKey.toUpperCase()+" : "+member[memberKey]+"<br><br>")
+        				myP.innerHTML += (memberKey.toUpperCase()+" : "+member[memberKey]+"<br><br>")
         			}       			
         		}
 
         	}
         }
     }
+    element.appendChild(myP);
     }
